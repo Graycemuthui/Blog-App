@@ -1,24 +1,53 @@
-# README
+# Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- This is a blog app that allows users to create and share their opinions and other users can read and comment on them. Additionally, users can also view update and delete their blogs.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby on Rails
 
-* System dependencies
+## Live Demo
 
-* Configuration
+No live demo available
 
-* Database creation
+### Download it as a ZIP file
 
-* Database initialization
+or
 
-* How to run the test suite
+### Clone it in your local machine using GIT
 
-* Services (job queues, cache servers, search engines, etc.)
+to get a local copy , clone the repository using git clone
+(git@github.com:Graycemuthui/Blog-App.git)
 
-* Deployment instructions
+After you clone it run the following commands
 
-* ...
+```running the app
+
+- cd My-Catalog
+- bundle install
+- rails db:migrate
+- rails server
+
+```
+
+## Authors
+
+👤 **Grace Muthui**
+
+- GitHub: [@Grayce Muthui](https://github.com/Graycemuthui)
+- Twitter: [@Grayce_Muthui](https://twitter.com/Grayce_Muthui)
+- LinkedIn: [@Grayce Muthui](http://www.linkedin.com/in/grayce-muthui-a17294226)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Graycemuthui/Blog-App/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](https://github.com/Graycemuthui/Blog-App/blob/dev/LICENSE) licensed.
