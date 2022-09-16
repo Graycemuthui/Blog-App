@@ -13,7 +13,7 @@ class Post < ApplicationRecord
     user.save
   end
 
-  def self.five_recent_comments(author_id, post_id)
-    Comment.where(author_id, post_id).order(created_at: :desc).limit(5).all
+  def recent_five_comments
+    comments.last(5)
   end
 end
