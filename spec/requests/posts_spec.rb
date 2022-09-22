@@ -1,9 +1,23 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
+  before(:each) do
+    @user = User.create(name: 'Tom', photo: '', posts_counter: 0)
+    @post = Post.create(
+      author: @user,
+      title: 'Here we are!',
+      text: 'Here they go',
+      comments_counter: 0,
+      likes_counter: 0
+    )
+    Comment.create(author: @user, post: @post, text: 'Hello bob')
+    Comment.create(author: @user, post: @post, text: 'Hello gram')
+    Comment.create(author: @user, post: @post, text: 'Hello sam')
+  end
+
   describe 'GET /index' do
-    before(:example) do
-      get '/posts'
+    before(:each) do
+      get user_posts_path(@user)
     end
 
     it 'return correct response' do
@@ -15,13 +29,13 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'body should includes correct placeholder text' do
-      expect(response.body).to include('Here is a list of posts for a given user')
+      expect(response.body).to include('Here is a list of posts for all users')
     end
   end
 
   describe 'GET /show' do
-    before(:example) do
-      get '/users/1/posts/1'
+    before(:each) do
+      get user_post_path(@user, @post)
     end
 
     it 'return correct response' do
@@ -33,7 +47,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'body should includes correct placeholder text' do
-      expect(response.body).to include('Post content for a given user')
+      expect(response.body).to include('Here is a list of posts for a given user')
     end
   end
 end
