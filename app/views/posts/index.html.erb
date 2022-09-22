@@ -3,8 +3,8 @@
     <% @posts.each do |post| %>
   <a <a href="/users/<%= @user.id %>/posts/<%= post.id %>">
     <div class="list-wrapper">
-    <ul class="post-list-cont"><%= render 'shared/post', post: post %></ul>
-    <ul class="comments-list-cont">
+    <ul class="post-list"><%= render 'shared/post', post: post %></ul>
+    <ul class="comments-list">
       <% if post.comments_counter > 0 %>
             <%= render 'shared/comment', comments: post.recent_five_comments %>
       <% else %>
@@ -14,8 +14,7 @@
     </div>
   <a>
     <% end %>
-
-  <div class="btn-wrapper">  <button type='button'>Pagination</button></div>
+  <div class="btn">  <button type='button'>Pagination</button></div>
 
 </section>
 

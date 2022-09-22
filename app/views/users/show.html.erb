@@ -1,11 +1,11 @@
 <section>
   <%= render 'shared/user', user:@user %>
-  <div class="bio-wrapper">
+  <div class="bio-heading">
     <h4>Bio:</h4>
     <p><%= @user.bio %><p>
   </div>   
-  <ul class="list-cont">
-  <% if @user.posts_counter > 0 %>
+  <ul class="list">
+    <% if @user.posts_counter %>
     <% @user.recent_three_posts.each do |post| %>
       <a href="/users/<%= @user.id %>/posts/<%= post.id %>" >
         <%= render 'shared/post', post: post %>
@@ -15,7 +15,7 @@
     <li>No Posts</li>
   <% end %>
 </ul>
-  <div class="btn-wrapper">
+  <div class="btn">
   <a href="/users/<%= @user.id %>/posts"><button type="button">See All Posts</button></a>
   </div>
 </section>

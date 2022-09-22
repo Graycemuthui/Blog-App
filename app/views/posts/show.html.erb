@@ -8,12 +8,12 @@
 </div>
 <p><%= @post.text %></p>
 </div>
-  <ul class="comments-list-cont">
+  <ul class="comments-list">
       <% if @post.comments_counter > 0 %>
           <%= render 'shared/comment', comments: @post.comments %>
       <% else %>
-      <li>No comments</li>
-    <% end %>
+        <li>No comments</li>
+      <% end %> 
   </ul>   
 </section>
 
