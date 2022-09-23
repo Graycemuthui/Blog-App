@@ -65,7 +65,7 @@ button {
 }
 
 .user-card-shared div {
-  width: calc(95% - 140px);
+  width: calc(95% - 130px);
   border: 2px #000 solid;
   padding: 20px;
 }
