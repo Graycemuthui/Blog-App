@@ -12,7 +12,7 @@
 </div>
   <ul class="comments-list">
       <% if @post.comments_counter > 0 %>
-          <%= render '/shared/comment', comments: @post.comments %>
+          <%= render '/shared/comments', comments: @post.comments %>
       <% else %>
         <li>No comments</li>
       <% end %> 
