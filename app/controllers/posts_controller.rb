@@ -8,17 +8,23 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  # a method to create a new form for a post
   def new
     @post = Post.new
   end
 
+  # add a route to handle the HTTP POST requests that result from submissions of the form and implement the create controller
   def create
     @post = current_user.posts.new(post_params)
+    # respond to block
     respond_to do |format|
       format.html do
+        # if save is successful
         if @post.save
+          # redirect to index
           redirect_to "/users/#{@post.author.id}/posts/#{@post.id}"
         else
+
           render :new
         end
       end
