@@ -2,7 +2,8 @@ require 'rails_helper'
 RSpec.feature 'User Index Page', type: :feature do
   before :each do
     @user = User.create(name: 'Lilly',
-                        photo: '<img src="http://grayce.com/co/png" alt="user avatar">', bio: 'Teacher from Poland.', posts_counter: 0)
+                        photo: '<img src="http://grayce.com/co/png" alt="user avatar">',
+                        bio: 'Teacher from Poland.', posts_counter: 0)
 
     visit user_path(@user)
   end

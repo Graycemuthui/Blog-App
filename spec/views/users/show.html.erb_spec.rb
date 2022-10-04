@@ -34,7 +34,8 @@ end
 RSpec.feature 'User Index Page', type: :feature do
   before :each do
     @user = User.create(name: 'Lilly',
-                        photo: 'https://unsplash.com/photos/l-T-LpQnNRg', bio: 'Teacher from Poland.', posts_counter: 0)
+                        photo: 'https://unsplash.com/photos/l-T-LpQnNRg',
+                        bio: 'Teacher from Poland.', posts_counter: 0)
     @first_post = Post.create(author: @user, title: 'Hello', text: 'This is my first post', comments_counter: 0,
                               likes_counter: 0)
     @second_post = Post.create(author: @user, title: 'Hello', text: 'This is my first post', comments_counter: 0,
@@ -63,7 +64,8 @@ end
 RSpec.feature 'User Index Page', type: :feature do
   before :each do
     @user = User.create(name: 'Lilly',
-                        photo: '<img src="http://grayce.com/co/png" alt="user avatar">', bio: 'Teacher from Poland.', posts_counter: 0)
+                        photo: '<img src="http://grayce.com/co/png" alt="user avatar">',
+                        bio: 'Teacher from Poland.', posts_counter: 0)
     @first_post = Post.create(author: @user, title: 'Hello', text: 'This is my first post', comments_counter: 0,
                               likes_counter: 0)
     @second_post = Post.create(author: @user, title: 'Hello', text: 'This is my first post', comments_counter: 0,
