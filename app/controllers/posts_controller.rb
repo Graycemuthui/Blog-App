@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.includes(comments: [:author]).find(params[:id])
   end
 
   # a method to create a new form for a post
@@ -13,7 +13,6 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  # add a route to handle the HTTP POST requests that result from submissions of the form and implement the create controller
   def create
     @post = current_user.posts.new(post_params)
     # respond to block
