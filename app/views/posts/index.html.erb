@@ -6,7 +6,7 @@
     <ul class="post-list"><%= render 'shared/post', post: post %></ul>
     <ul class="comments-list">
       <% if post.comments_counter > 0 %>
-            <%= render 'shared/comment', comments: post.recent_five_comments %>
+            <%= render 'shared/comments', comments: post.recent_five_comments %>
       <% else %>
         <li>No comments</li>
       <% end %>
