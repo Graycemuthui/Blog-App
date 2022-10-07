@@ -38,6 +38,13 @@ After you clone it run the following commands
 - Twitter: [@Grayce_Muthui](https://twitter.com/Grayce_Muthui)
 - LinkedIn: [@Grayce Muthui](http://www.linkedin.com/in/grayce-muthui-a17294226)
 
+👤 **Kweku Bright**
+
+- GitHub: [@kwekubright](https://github.com/kwekubright)
+- Twitter: [@twitterhandle](https://twitter.com/kwekubright_)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/kwekubright)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
