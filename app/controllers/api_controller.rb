@@ -42,7 +42,6 @@ class ApiController < ApplicationController
 
     def check_comment_params(text)
       return false unless check_post_params
-
       if text.nil? || text.empty?
         json_response({ error: 'Comment text is empty.' }, 400)
         false
@@ -59,7 +58,7 @@ class ApiController < ApplicationController
         json_response({ error: 'Not authorized.' }, 401)
         false
       elsif !User.exists?(params[:user_id])
-        json_response({ error: 'User does not exist.' }, 404)
+        json_response({ error: 'User cannot be found' }, 404)
         false
       else
         true
@@ -79,7 +78,7 @@ class ApiController < ApplicationController
       if Post.where(id: params[:post_id], author_id: params[:user_id]).exists?
         true
       else
-        json_response({ error: 'Post does not exist.' }, 404)
+        json_response({ error: 'Post cannot be found' }, 404)
         false
       end
     end
